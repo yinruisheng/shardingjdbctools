@@ -1,0 +1,9 @@
+com\yrs\cn\shardingjdbcmanager\algorithm\DatabaseShardingAlg.class
+com\yrs\cn\shardingjdbcmanager\algorithm\TableShardingAlg.class
+com\yrs\cn\shardingjdbcmanager\initDatasourceInfo\DataSourceUtil.class
+com\yrs\cn\shardingjdbcmanager\initdruiddatasource\LoadShardJdbcDataSource.class
+com\yrs\cn\shardingjdbcmanager\entity\ShardDatabase.class
+com\yrs\cn\shardingjdbcmanager\initDatasourceInfo\ResultForLoadShardJdbcDataSourceBefore.class
+com\yrs\cn\shardingjdbcmanager\shardautoconfigue\ShardStarterProperties.class
+com\yrs\cn\shardingjdbcmanager\initdruiddatasource\LoadShardJdbcDataSourceBefore.class
+com\yrs\cn\shardingjdbcmanager\shardautoconfigue\ShardBaseDatabaseConfig.class

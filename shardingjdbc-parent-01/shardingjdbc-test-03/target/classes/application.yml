@@ -1,0 +1,33 @@
+server:
+  port: 80
+spring:
+  application:
+    name: testshardingjdbcstarter
+  main:
+    allow-bean-definition-overriding: true
+  redis:
+    host: 10.14.32.161
+    port: 6379
+    database: 9
+#  datasource:
+#    url: jdbc:mysql://10.15.123.81:3306/yrs_base?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#自定义shardingjdbc相关配置
+
+sharding:
+  starter:
+    initconfig:
+      enable: true
+      url: jdbc:mysql://10.15.123.81:3306/yrs_base?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+      username: root
+      password: 123456
+      default-data-source-name: yrs_base
+      logic-table: alarm
+#      actual-data-nodes: yrs_base_${2020..2022}.alarm_${1..12}
+      actual-data-nodes: yrs_base_2020.alarm_202001,yrs_base_2020.alarm_202002,yrs_base_2020.alarm_202003,yrs_base_2020.alarm_202004,yrs_base_2020.alarm_202005,yrs_base_2020.alarm_202006,yrs_base_2020.alarm_202007,yrs_base_2020.alarm_202008,yrs_base_2020.alarm_202009,yrs_base_2020.alarm_202010,yrs_base_2020.alarm_202011,yrs_base_2020.alarm_202012,yrs_base_2021.alarm_202101,yrs_base_2021.alarm_202102,yrs_base_2021.alarm_202103,yrs_base_2021.alarm_202104,yrs_base_2021.alarm_202105,yrs_base_2021.alarm_202106,yrs_base_2021.alarm_202107,yrs_base_2021.alarm_202108,yrs_base_2021.alarm_202109,yrs_base_2021.alarm_202110,yrs_base_2021.alarm_202111,yrs_base_2021.alarm_202112
+      #shard-column对应的是数据库的表字段而不是实体类的字段
+      db-shard-column: create_time
+      table-shard-column: create_time
+      sql-show-enable: true
