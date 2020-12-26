@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50731
 File Encoding         : 65001
 
-Date: 2020-12-25 20:35:14
+Date: 2020-12-26 19:45:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -36,4 +36,3 @@ CREATE TABLE `shard_database` (
 INSERT INTO `shard_database` VALUES ('1', '10.15.123.81', '3306', 'yrs_base', 'root', '123456', '1');
 INSERT INTO `shard_database` VALUES ('2', '10.15.123.81', '3306', 'yrs_base_2020', 'root', '123456', '1');
 INSERT INTO `shard_database` VALUES ('3', '10.15.123.81', '3306', 'yrs_base_2021', 'root', '123456', '1');
-INSERT INTO `shard_database` VALUES ('4', '10.15.123.81', '3306', 'yrs_base_2022', 'root', '123456', '1');
